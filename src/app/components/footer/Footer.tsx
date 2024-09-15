@@ -1,4 +1,5 @@
-import React from 'react';
+"use client";
+import React, { useEffect, useState } from 'react';
 import {
   FooterContainer,
   FooterContent,
@@ -14,22 +15,32 @@ import {
 import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from 'react-icons/fa';
 
 const Footer: React.FC = () => {
+  const [hasMounted, setHasMounted] = useState(false); // Estado para controlar el montaje
+
+  useEffect(() => {
+    setHasMounted(true); // Marca el componente como montado
+  }, []);
+
+  if (!hasMounted) {
+    return null; // Evita renderizar hasta que esté montado
+  }
+
   return (
     <FooterContainer>
       <FooterContent>
         {/* Primer columna */}
         <FooterColumn>
           <FooterTitle>Sobre La BICIPOSTA</FooterTitle>
-          <FooterLink href="#about">Quiénes somos</FooterLink>
+          <FooterLink href="/nosotros">Quiénes somos</FooterLink>
           <FooterLink href="#events">Eventos</FooterLink>
-          <FooterLink href="#contact">Contacto</FooterLink>
+          <FooterLink href="/contacto">Contacto</FooterLink>
         </FooterColumn>
 
         {/* Segunda columna */}
         <FooterColumn>
           <FooterTitle>Recursos</FooterTitle>
           <FooterLink href="#blog">Blog</FooterLink>
-          <FooterLink href="#faq">Preguntas frecuentes</FooterLink>
+          <FooterLink href="#preguntas">Preguntas frecuentes</FooterLink>
           <FooterLink href="#support">Soporte</FooterLink>
         </FooterColumn>
 

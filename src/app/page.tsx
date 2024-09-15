@@ -11,36 +11,24 @@ import HotShowers from "./components/hotShowers/HotShowers";
 import ProductDivider from "./components/productDivider/ProductDivider";
 
 export default function Home() {
-  const [key, setKey] = useState(0); // Creamos un estado 'key' para forzar re-render
+  const [hasMounted, setHasMounted] = useState(false); // Estado para controlar si el componente está montado
 
   useEffect(() => {
-    const handlePageError = () => {
-      // Aquí puedes detectar si la página se rompe o hay un error
-      console.log("Forzando re-render debido a un error...");
-      setKey((prevKey) => prevKey + 1); // Incrementa la 'key' para forzar re-render
-    };
-
-    // Escucha de errores o condiciones que indiquen que algo está mal
-    window.addEventListener("error", handlePageError);
-
-    // Cleanup: eliminamos el listener cuando el componente se desmonta
-    return () => {
-      window.removeEventListener("error", handlePageError);
-    };
+    setHasMounted(true); // Marca el componente como montado
   }, []);
+
+  if (!hasMounted) {
+    return null; // Evita renderizar hasta que esté montado
+  }
 
   return (
     <>
-      <div key={key}>
-        <Navbar />
-        <Header />
-        <ProductDivider/>
-        <HotShowers/>
-        <RepairService/>
-        <StairSection/>
-        <InfoSection />
-        <Footer/>
-      </div>
+      <Header />
+      <ProductDivider />
+      <HotShowers />
+      <RepairService />
+      <StairSection />
+      <InfoSection />
     </>
   );
 }

@@ -2,6 +2,8 @@
 import "./globals.css";
 import { Metadata } from "next";
 import ReduxProvider from './redux-provider';
+import Navbar from "./components/navbar/Navbar";
+import Footer from "./components/footer/Footer";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -13,8 +15,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body>
         <ReduxProvider>
-          
+          <Navbar/>
           {children}
+          <Footer/>
         </ReduxProvider>
       </body>
     </html>

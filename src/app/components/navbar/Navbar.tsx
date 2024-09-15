@@ -18,6 +18,7 @@ import {
 } from "./NavbarStyles";
 
 const Navbar = () => {
+  const [hasMounted, setHasMounted] = useState(false); // Estado para controlar el montaje
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   
@@ -32,6 +33,8 @@ const Navbar = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   useEffect(() => {
+    setHasMounted(true); // Marca el componente como montado
+
     const handleClickOutside = (event: MouseEvent) => {
       // Verifica si el clic fue fuera del menú hamburguesa, dropdown y botón de menú
       if (
@@ -57,6 +60,10 @@ const Navbar = () => {
     };
   }, []);
 
+  if (!hasMounted) {
+    return null; // Evita renderizar hasta que esté montado
+  }
+
   return (
     <Nav>
       {/* Logo */}
@@ -78,13 +85,13 @@ const Navbar = () => {
           transition={{ duration: 0.5 }}
         >
           <motion.li whileHover={{ scale: 1.1 }}>
-            <a href="#">Inicio</a>
+            <a href="/">Inicio</a>
           </motion.li>
           <motion.li whileHover={{ scale: 1.1 }}>
-            <a href="#">Nosotros</a>
+            <a href="/nosotros">Nosotros</a>
           </motion.li>
           <motion.li whileHover={{ scale: 1.1 }}>
-            <a href="#">Contacto</a>
+            <a href="/contacto">Contacto</a>
           </motion.li>
         </motion.ul>
       </MenuLinks>
@@ -160,13 +167,13 @@ const Navbar = () => {
           transition={{ duration: 0.5 }}
         >
           <motion.li whileHover={{ scale: 1.1 }}>
-            <a href="#">Inicio</a>
+            <a href="/">Inicio</a>
           </motion.li>
           <motion.li whileHover={{ scale: 1.1 }}>
-            <a href="#">Nosotros</a>
+            <a href="/nosotros">Nosotros</a>
           </motion.li>
           <motion.li whileHover={{ scale: 1.1 }}>
-            <a href="#">Contacto</a>
+            <a href="/contacto">Contacto</a>
           </motion.li>
           {/* Agregar Categorías dentro del menú móvil */}
           <motion.li whileHover={{ scale: 1.1 }}>
