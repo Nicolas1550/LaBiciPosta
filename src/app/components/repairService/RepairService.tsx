@@ -6,6 +6,7 @@ import "swiper/css/autoplay";
 import { Pagination, Autoplay } from "swiper/modules";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
+import Image from "next/image";  // Importamos el componente de Next.js para imágenes
 import {
   MainContainer,
   HeroSection,
@@ -88,13 +89,32 @@ const RepairService: React.FC = () => {
               modules={[Pagination, Autoplay]}
             >
               <SwiperSlide>
-                <img src="/images/swiper3.webp" alt="Reparación de Bicicleta 1" />
+                <Image
+                  src="/images/swiper3.webp"
+                  alt="Reparación de Bicicleta 1"
+                  width={1000} // Debes especificar un width
+                  height={600} // Debes especificar un height
+                  layout="responsive" // Esto asegura que la imagen se adapte
+                  priority={true} // Esto optimiza para la carga inicial
+                />
               </SwiperSlide>
               <SwiperSlide>
-                <img src="/images/swiper1.webp" alt="Reparación de Bicicleta 2" />
+                <Image
+                  src="/images/swiper1.webp"
+                  alt="Reparación de Bicicleta 2"
+                  width={1000}
+                  height={600}
+                  layout="responsive"
+                />
               </SwiperSlide>
               <SwiperSlide>
-                <img src="/images/swiper2.webp" alt="Reparación de Bicicleta 3" />
+                <Image
+                  src="/images/swiper2.webp"
+                  alt="Reparación de Bicicleta 3"
+                  width={1000}
+                  height={600}
+                  layout="responsive"
+                />
               </SwiperSlide>
             </Swiper>
           </CarouselBackground>

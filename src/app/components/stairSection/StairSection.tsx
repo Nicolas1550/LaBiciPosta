@@ -4,6 +4,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 import { Pagination, Autoplay } from 'swiper/modules';
+import Image from 'next/image'; // Importar el componente de Next.js para imágenes
 import { 
   ParentContainer,  
   StairTextContainer, 
@@ -29,13 +30,34 @@ const StairSection: React.FC = () => {
           modules={[Pagination, Autoplay]}
         >
           <SwiperSlide>
-            <img src="/images/swiper1.webp" alt="Carrera de montaña" />
+            <Image
+              src="/images/swiper1.webp"
+              alt="Carrera de montaña"
+              width={1000} // Define el tamaño de la imagen
+              height={600} // Define el tamaño de la imagen
+              layout="responsive" // Ajusta la imagen automáticamente al contenedor
+              priority={true} // Optimización para la carga inicial
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="/images/swiper2.webp" alt="Ciclismo urbano" />
+            <Image
+              src="/images/swiper2.webp"
+              alt="Ciclismo urbano"
+              width={1000}
+              height={600}
+              layout="responsive"
+              priority={true}
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="/images/swiper3.webp" alt="Competencia extrema" />
+            <Image
+              src="/images/swiper3.webp"
+              alt="Competencia extrema"
+              width={1000}
+              height={600}
+              layout="responsive"
+              priority={true}
+            />
           </SwiperSlide>
         </Swiper>
       </CarouselBackground>
