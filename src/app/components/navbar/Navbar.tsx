@@ -20,6 +20,9 @@ import {
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  
+  // Ref para el menú hamburguesa
+  const menuRef = useRef<HTMLDivElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
@@ -27,11 +30,19 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
+      // Verifica si el clic fue fuera del menú hamburguesa o dropdown
+      if (
+        menuRef.current && 
+        !menuRef.current.contains(event.target as Node)
+      ) {
+        setIsOpen(false); // Cierra el menú hamburguesa
+      }
+
       if (
         dropdownRef.current &&
         !dropdownRef.current.contains(event.target as Node)
       ) {
-        setIsDropdownOpen(false);
+        setIsDropdownOpen(false); // Cierra el dropdown
       }
     };
 
@@ -39,7 +50,7 @@ const Navbar = () => {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [dropdownRef]);
+  }, []);
 
   return (
     <Nav>
@@ -137,7 +148,7 @@ const Navbar = () => {
       </MenuToggle>
 
       {/* Menú móvil (incluyendo Categorías) */}
-      <Menu isOpen={isOpen}>
+      <Menu ref={menuRef} isOpen={isOpen}>
         <motion.ul
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
