@@ -113,7 +113,7 @@ const Navbar = () => {
             <FaFacebookF />
           </a>
           <a
-            href="https://twitter.com"
+            href="https://twitter.com" 
             target="_blank"
             rel="noopener noreferrer"
           >
