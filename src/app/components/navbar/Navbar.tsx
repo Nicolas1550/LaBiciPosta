@@ -26,6 +26,8 @@ const Navbar = () => {
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
+
+  // Cambia el estado del menú hamburguesa
   const toggleMenu = () => setIsOpen(!isOpen);
 
   useEffect(() => {
