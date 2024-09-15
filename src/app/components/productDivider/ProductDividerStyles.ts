@@ -17,8 +17,17 @@ export const DividerContainer = styled.section`
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   overflow: hidden;
 
+  @media (min-width: 1024px) {
+    padding: 80px 40px;
+  }
+
   @media (min-width: 768px) {
     flex-direction: row;
+    padding: 60px 30px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 40px 10px;
   }
 `;
 
@@ -32,6 +41,10 @@ export const DividerContent = styled.div`
   @media (max-width: 768px) {
     max-width: 100%;
   }
+
+  @media (max-width: 480px) {
+    padding: 15px;
+  }
 `;
 
 // Título del divisor con estilo mejorado
@@ -44,8 +57,17 @@ export const Title = styled.h2`
   letter-spacing: 1.5px;
   line-height: 1.2;
 
+  @media (max-width: 1024px) {
+    font-size: 2.6rem;
+  }
+
   @media (max-width: 768px) {
     font-size: 2.4rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 2rem;
+    margin-bottom: 20px;
   }
 `;
 
@@ -68,6 +90,12 @@ export const CallToAction = styled.a`
     transform: scale(1.08);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
   }
+
+  @media (max-width: 480px) {
+    font-size: 1.4rem;
+    padding: 12px 30px;
+    margin-bottom: 20px;
+  }
 `;
 
 // Ícono de WhatsApp dentro del botón con efecto
@@ -78,6 +106,10 @@ export const WhatsAppIcon = styled(FaWhatsapp)`
 
   ${CallToAction}:hover & {
     transform: rotate(20deg);
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.6rem;
   }
 `;
 
@@ -91,6 +123,11 @@ export const DividerImages = styled.div`
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
+    gap: 20px;
+  }
+
+  @media (max-width: 480px) {
+    gap: 15px;
   }
 `;
 
@@ -110,6 +147,10 @@ export const ImageContainer = styled.div`
   @media (max-width: 768px) {
     max-width: 100%;
     margin-bottom: 20px;
+  }
+
+  @media (max-width: 480px) {
+    margin-bottom: 15px;
   }
 `;
 

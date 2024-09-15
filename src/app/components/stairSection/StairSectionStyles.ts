@@ -9,6 +9,15 @@ export const ParentContainer = styled.section`
   align-items: center;
   overflow: hidden;
   background-color: #f9f9f9;
+
+  @media (max-width: 768px) {
+    height: auto; /* Permitir que la altura se ajuste automáticamente en pantallas pequeñas */
+    padding: 20px 10px; /* Añadir padding para pantallas pequeñas */
+  }
+
+  @media (max-width: 480px) {
+    padding: 15px 5px;
+  }
 `;
 
 export const StairTextContainer = styled.div`
@@ -32,6 +41,11 @@ export const StairTextContainer = styled.div`
     width: 90%;
     padding: 1.5rem;
   }
+
+  @media (max-width: 480px) {
+    width: 95%;
+    padding: 1rem;
+  }
 `;
 
 export const StairTitle = styled.h3`
@@ -44,6 +58,10 @@ export const StairTitle = styled.h3`
   @media (max-width: 768px) {
     font-size: 1.8rem;
   }
+
+  @media (max-width: 480px) {
+    font-size: 1.6rem;
+  }
 `;
 
 export const StairDescription = styled.p`
@@ -55,6 +73,12 @@ export const StairDescription = styled.p`
 
   @media (max-width: 768px) {
     font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
   }
 `;
 
@@ -77,6 +101,10 @@ export const CarouselBackground = styled.div`
 
     &:hover {
       filter: brightness(0.5);
+    }
+
+    @media (max-width: 768px) {
+      filter: brightness(0.5); /* Ajuste de brillo para pantallas pequeñas */
     }
   }
 `;

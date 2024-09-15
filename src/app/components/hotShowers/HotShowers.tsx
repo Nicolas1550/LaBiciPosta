@@ -19,12 +19,12 @@ import {
 const HotShowers: React.FC = () => {
   return (
     <MainContainer>
-      {/* Hero Section */}
+      {/* Sección Hero */}
       <HeroSection>
         <HeroContent>
-          <Title>Relax and Recharge with Our Hot Showers</Title>
+          <Title>Relájate y recarga energías con nuestras Hot Showers</Title>
           <Subtitle>
-            After a long ride, enjoy a warm shower and restful sleep at BiciPosta. Perfect for cyclists!
+            Después de un largo paseo, disfruta de una ducha caliente y un descanso reparador en BiciPosta. ¡Perfecto para ciclistas!
           </Subtitle>
           <CallToAction
             href="https://wa.me/5492964541181"
@@ -32,12 +32,12 @@ const HotShowers: React.FC = () => {
             rel="noopener noreferrer"
           >
             <WhatsAppIcon />
-            Book Now via WhatsApp
+            Reserva ahora vía WhatsApp
           </CallToAction>
         </HeroContent>
       </HeroSection>
 
-      {/* Features Section */}
+      {/* Sección de Características */}
       <FeaturesSection>
         <FeatureItem>
           <FeatureIcon>
@@ -50,14 +50,14 @@ const HotShowers: React.FC = () => {
           <FeatureIcon>
             <SleepingBagIcon />
           </FeatureIcon>
-          <FeatureTitle>Sleeping Bags</FeatureTitle>
+          <FeatureTitle>Sacos de dormir</FeatureTitle>
         </FeatureItem>
 
         <FeatureItem>
           <FeatureIcon>
             <RelaxIcon />
           </FeatureIcon>
-          <FeatureTitle>Resting Area</FeatureTitle>
+          <FeatureTitle>Área de descanso</FeatureTitle>
         </FeatureItem>
       </FeaturesSection>
     </MainContainer>

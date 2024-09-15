@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { motion } from 'framer-motion';
+import styled from "styled-components";
+import { motion } from "framer-motion";
 
 // Contenedor principal del navbar
 export const Nav = styled.nav`
@@ -16,8 +16,11 @@ export const Nav = styled.nav`
 
   @media (max-width: 768px) {
     padding: 1rem;
+    height: auto; /* Ajusta la altura automáticamente */
   }
 `;
+
+
 
 // Contenedor del logo sin animaciones
 export const LogoContainer = styled.div`
@@ -60,6 +63,9 @@ export const MenuLinks = styled.div`
       border-bottom: 2px solid #4caf50; /* Verde como indicador de la página activa */
       font-weight: bold;
     }
+    @media (max-width: 768px) {
+      display: none; /* Oculta el menú de escritorio en pantallas móviles */
+    }
   }
 `;
 
@@ -67,6 +73,9 @@ export const MenuLinks = styled.div`
 export const SocialMediaIcons = styled.div`
   display: flex;
   gap: 1rem;
+  position: absolute; /* Asegura que los íconos estén centrados en móviles */
+  left: 50%;
+  transform: translateX(-50%); /* Centra los íconos horizontalmente */
 
   a {
     color: #333; /* Negro para los íconos */
@@ -78,7 +87,13 @@ export const SocialMediaIcons = styled.div`
       transform: scale(1.1); /* Ligeramente más grande en hover */
     }
   }
+
+  @media (min-width: 768px) {
+    position: static; /* Vuelve al comportamiento normal en escritorio */
+    transform: none;
+  }
 `;
+
 
 // Botón de menú en dispositivos móviles
 export const MenuToggle = styled.div<{ $isOpen: boolean }>`
@@ -113,8 +128,7 @@ export const MenuToggle = styled.div<{ $isOpen: boolean }>`
       span:nth-child(3) {
         transform: rotate(-45deg);
       }
-    `
-  }
+    `}
 
   @media (max-width: 768px) {
     display: flex;
@@ -123,7 +137,7 @@ export const MenuToggle = styled.div<{ $isOpen: boolean }>`
 
 // Menú desplegable en móvil
 export const Menu = styled(motion.div)<{ isOpen: boolean }>`
-  display: ${({ isOpen }) => (isOpen ? 'block' : 'none')};
+  display: ${({ isOpen }) => (isOpen ? "block" : "none")};
   position: absolute;
   top: 100%;
   right: 0;
@@ -165,6 +179,9 @@ export const Menu = styled(motion.div)<{ isOpen: boolean }>`
 // Contenedor del botón del Dropdown
 export const DropdownContainer = styled.div`
   position: relative;
+  @media (max-width: 768px) {
+    display: none; /* Oculta el menú de escritorio en pantallas móviles */
+  }
 `;
 
 export const DropdownMenuButton = styled.button`

@@ -54,7 +54,7 @@ const Navbar = () => {
         />
       </LogoContainer>
 
-      {/* Menú */}
+      {/* Menú en escritorio */}
       <MenuLinks>
         <motion.ul
           initial={{ opacity: 0, y: -10 }}
@@ -74,7 +74,7 @@ const Navbar = () => {
       </MenuLinks>
 
       <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
-        {/* Dropdown Categorías */}
+        {/* Dropdown Categorías solo en escritorio */}
         <DropdownContainer ref={dropdownRef}>
           <DropdownMenuButton onClick={toggleDropdown}>
             Categorías
@@ -136,7 +136,7 @@ const Navbar = () => {
         <span />
       </MenuToggle>
 
-      {/* Menú móvil */}
+      {/* Menú móvil (incluyendo Categorías) */}
       <Menu isOpen={isOpen}>
         <motion.ul
           initial={{ opacity: 0, y: -10 }}
@@ -151,6 +151,19 @@ const Navbar = () => {
           </motion.li>
           <motion.li whileHover={{ scale: 1.1 }}>
             <a href="#">Contacto</a>
+          </motion.li>
+          {/* Agregar Categorías dentro del menú móvil */}
+          <motion.li whileHover={{ scale: 1.1 }}>
+            <a href="#">Próximas Carreras</a>
+          </motion.li>
+          <motion.li whileHover={{ scale: 1.1 }}>
+            <a href="#">Tienda de Bicicletas</a>
+          </motion.li>
+          <motion.li whileHover={{ scale: 1.1 }}>
+            <a href="#">Servicios de Reparación</a>
+          </motion.li>
+          <motion.li whileHover={{ scale: 1.1 }}>
+            <a href="#">Blog</a>
           </motion.li>
         </motion.ul>
       </Menu>

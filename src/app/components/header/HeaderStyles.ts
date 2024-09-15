@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 export const HeaderContainer = styled.header`
   width: 100%;
   height: 80vh; /* Aumentamos la altura para que ocupe toda la pantalla */
-  background-image: url('/images/header.webp'); /* Imagen de fondo */
+  background-image: url('/images/header.jpg'); /* Imagen de fondo */
   background-size: cover;
   background-position: center;
   display: flex;
