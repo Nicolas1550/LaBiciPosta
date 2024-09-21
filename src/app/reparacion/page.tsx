@@ -24,13 +24,13 @@ const RepairPage: React.FC = () => {
     setHasMounted(true); 
   }, []);
 
+  
+  const whatsappLink =
+  "https://wa.me/123456789?text=¡Hola!%20Me%20interesa%20el%20servicio%20de%20reparación%20de%20bicicletas.";
+  
   if (!hasMounted) {
     return null;
   }
-
-  const whatsappLink =
-    "https://wa.me/123456789?text=¡Hola!%20Me%20interesa%20el%20servicio%20de%20reparación%20de%20bicicletas.";
-
   return (
     <>
       {/* Sección Hero con imagen de fondo */}
