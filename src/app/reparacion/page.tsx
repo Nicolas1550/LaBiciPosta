@@ -20,17 +20,19 @@ import {
 const RepairPage: React.FC = () => {
   const [hasMounted, setHasMounted] = useState(false); 
 
+  // Asegura que el componente se monte antes de renderizar
   useEffect(() => {
-    setHasMounted(true); 
+    setHasMounted(true);
   }, []);
 
-  
-  const whatsappLink =
-  "https://wa.me/123456789?text=¡Hola!%20Me%20interesa%20el%20servicio%20de%20reparación%20de%20bicicletas.";
-  
+  // No se renderiza el componente hasta que esté montado
   if (!hasMounted) {
     return null;
   }
+
+  const whatsappLink =
+    "https://wa.me/123456789?text=¡Hola!%20Me%20interesa%20el%20servicio%20de%20reparación%20de%20bicicletas.";
+
   return (
     <>
       {/* Sección Hero con imagen de fondo */}
