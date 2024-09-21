@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-/* Estilos para la sección hero con imagen de fondo */
 
 /* Overlay para oscurecer la imagen de fondo y hacer el texto más visible */
 export const HeroOverlay = styled.div`

@@ -18,19 +18,28 @@ import {
 } from "../components/stylesPages/RepairPageStyles";
 
 const RepairPage: React.FC = () => {
-  const [hasMounted, setHasMounted] = useState(false); 
+  const [hasMounted, setHasMounted] = useState(false); // Para controlar el montaje
+  const [stylesLoaded, setStylesLoaded] = useState(false); // Para controlar la carga de los estilos
 
   useEffect(() => {
-    // Simular un retraso en la carga del componente para que los estilos se apliquen correctamente
-    const timeout = setTimeout(() => {
-      setHasMounted(true);
-    }, 100);
+    // Controla el montaje del componente
+    setHasMounted(true);
 
-    return () => clearTimeout(timeout); // Limpiar el timeout al desmontar
+    // Comprobamos si los estilos están cargados
+    if (document.readyState === "complete") {
+      setStylesLoaded(true);
+    } else {
+      // Verificamos si se completa la carga del documento
+      const handleLoad = () => setStylesLoaded(true);
+      window.addEventListener("load", handleLoad);
+
+      return () => window.removeEventListener("load", handleLoad); // Limpieza del evento
+    }
   }, []);
 
-  if (!hasMounted) {
-    return null; // Espera a que el componente esté montado para evitar problemas con los estilos
+  // Evita renderizar hasta que el componente esté montado y los estilos cargados
+  if (!hasMounted || !stylesLoaded) {
+    return null;
   }
 
   const whatsappLink =
