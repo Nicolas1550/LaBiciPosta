@@ -1,8 +1,15 @@
 import React from 'react';
 import { Canvas } from '@react-three/fiber';
 import { motion } from 'framer-motion';
-import { HeaderContainer, HeaderContent, WelcomeText, SubText, Highlight, CtaButton } from './HeaderStyles';
-import ThreeScene from './ThreeScene'; // Importamos la escena 3D
+import {
+  HeaderContainer,
+  HeaderContent,
+  WelcomeText,
+  SubText,
+  Highlight,
+  CtaButton
+} from './HeaderStyles';
+import ThreeScene from './ThreeScene'; 
 
 const Header: React.FC = () => {
   return (
@@ -12,7 +19,6 @@ const Header: React.FC = () => {
         style={{ position: 'absolute', top: 0, left: 0, zIndex: 0 }}
         camera={{ position: [0, 0, 10], fov: 75 }}
       >
-        {/* Si tienes OrbitControls, lo eliminamos para que no se pueda manipular la escena */}
         <ambientLight intensity={0.5} />
         <directionalLight position={[0, 5, 5]} />
         <ThreeScene /> {/* Componente de la escena de partículas */}

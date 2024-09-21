@@ -1,4 +1,4 @@
-'use client';  // Indica que este es un Client Component
+'use client'; 
 
 import { Provider } from 'react-redux';
 import { store } from '@/redux/store';
@@ -18,7 +18,6 @@ const geistMono = localFont({
 });
 
 function InnerLayout({ children }: { children: React.ReactNode }) {
-  // Usar el selector tipado para obtener el estado de isDarkMode
 
   return (
     <>

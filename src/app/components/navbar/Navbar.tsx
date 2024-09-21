@@ -18,14 +18,14 @@ import {
 } from "./NavbarStyles";
 
 const Navbar = () => {
-  const [hasMounted, setHasMounted] = useState(false); // Estado para controlar el montaje
+  const [hasMounted, setHasMounted] = useState(false); 
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  
+
   // Refs para el menú hamburguesa y el botón de menú
   const menuRef = useRef<HTMLDivElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
-  const toggleButtonRef = useRef<HTMLDivElement>(null);  // Ref para el botón de hamburguesa
+  const toggleButtonRef = useRef<HTMLDivElement>(null); 
 
   const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
 
@@ -33,24 +33,24 @@ const Navbar = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   useEffect(() => {
-    setHasMounted(true); // Marca el componente como montado
+    setHasMounted(true); 
 
     const handleClickOutside = (event: MouseEvent) => {
       // Verifica si el clic fue fuera del menú hamburguesa, dropdown y botón de menú
       if (
-        menuRef.current && 
+        menuRef.current &&
         !menuRef.current.contains(event.target as Node) &&
         toggleButtonRef.current &&
         !toggleButtonRef.current.contains(event.target as Node)
       ) {
-        setIsOpen(false); // Cierra el menú hamburguesa
+        setIsOpen(false); 
       }
 
       if (
         dropdownRef.current &&
         !dropdownRef.current.contains(event.target as Node)
       ) {
-        setIsDropdownOpen(false); // Cierra el dropdown
+        setIsDropdownOpen(false); 
       }
     };
 
@@ -61,7 +61,7 @@ const Navbar = () => {
   }, []);
 
   if (!hasMounted) {
-    return null; // Evita renderizar hasta que esté montado
+    return null;
   }
 
   return (
@@ -110,16 +110,13 @@ const Navbar = () => {
             >
               <ul>
                 <li>
-                  <a href="#">Próximas Carreras</a>
+                  <a href="/carreras">Próximas Carreras</a>
                 </li>
                 <li>
-                  <a href="#">Tienda de Bicicletas</a>
+                  <a href="/reparacion">Servicios de Reparación</a>
                 </li>
                 <li>
-                  <a href="#">Servicios de Reparación</a>
-                </li>
-                <li>
-                  <a href="#">Blog</a>
+                  <a href="/preguntas">Preguntas Frecuentes</a>
                 </li>
               </ul>
             </DropdownMenu>
@@ -136,7 +133,7 @@ const Navbar = () => {
             <FaFacebookF />
           </a>
           <a
-            href="https://twitter.com" 
+            href="https://twitter.com"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -177,16 +174,10 @@ const Navbar = () => {
           </motion.li>
           {/* Agregar Categorías dentro del menú móvil */}
           <motion.li whileHover={{ scale: 1.1 }}>
-            <a href="#">Próximas Carreras</a>
+            <a href="/carreras">Próximas Carreras</a>
           </motion.li>
           <motion.li whileHover={{ scale: 1.1 }}>
-            <a href="#">Tienda de Bicicletas</a>
-          </motion.li>
-          <motion.li whileHover={{ scale: 1.1 }}>
-            <a href="#">Servicios de Reparación</a>
-          </motion.li>
-          <motion.li whileHover={{ scale: 1.1 }}>
-            <a href="#">Blog</a>
+            <a href="/reparacion">Servicios de Reparación</a>
           </motion.li>
         </motion.ul>
       </Menu>

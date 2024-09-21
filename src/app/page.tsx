@@ -9,14 +9,14 @@ import HotShowers from "./components/hotShowers/HotShowers";
 import ProductDivider from "./components/productDivider/ProductDivider";
 
 export default function Home() {
-  const [hasMounted, setHasMounted] = useState(false); // Estado para controlar si el componente está montado
+  const [hasMounted, setHasMounted] = useState(false); 
 
   useEffect(() => {
-    setHasMounted(true); // Marca el componente como montado
+    setHasMounted(true); 
   }, []);
 
   if (!hasMounted) {
-    return null; // Evita renderizar hasta que esté montado
+    return null; 
   }
 
   return (

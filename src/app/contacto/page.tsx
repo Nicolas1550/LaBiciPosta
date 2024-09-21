@@ -10,7 +10,7 @@ export default function Home() {
   }, []);
 
   if (!hasMounted) {
-    return null; // No renderiza nada hasta que se haya montado
+    return null; 
   }
 
   return (

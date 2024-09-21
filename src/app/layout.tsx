@@ -1,4 +1,3 @@
-// src/app/layout.tsx
 import "./globals.css";
 import { Metadata } from "next";
 import ReduxProvider from './redux-provider';

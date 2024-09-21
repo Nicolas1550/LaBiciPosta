@@ -14,6 +14,7 @@ export const HeroSection = styled.section`
   background-image: url("images/swiper3.webp");
   background-size: cover;
   background-position: center;
+  background-attachment: fixed; /* Efecto parallax */
   height: 100vh;
   color: white;
   text-align: center;
@@ -27,9 +28,14 @@ export const HeroSection = styled.section`
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.6); /* Oscurecer la imagen para mejorar el contraste del texto */
+  }
+
+  @media (max-width: 768px) {
+    background-attachment: scroll; /* Desactivamos el efecto parallax en pantallas pequeñas */
   }
 `;
+
 
 export const HeroContent = styled.div`
   z-index: 1;

@@ -13,7 +13,7 @@ import {
   RaceDate,
   RaceLocation
 } from './InfoSectionStyles';
-import { FaBicycle, FaMountain, FaHeartbeat } from 'react-icons/fa'; // Ejemplo de iconos que podrías usar
+import { FaBicycle, FaMountain, FaHeartbeat } from 'react-icons/fa'; 
 
 const InfoSection: React.FC = () => {
   const [showRaces, setShowRaces] = useState(false);

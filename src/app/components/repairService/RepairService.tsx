@@ -6,7 +6,7 @@ import "swiper/css/autoplay";
 import { Pagination, Autoplay } from "swiper/modules";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
-import Image from "next/image";  // Importamos el componente de Next.js para imágenes
+import Image from "next/image";  
 import {
   MainContainer,
   HeroSection,
@@ -143,7 +143,7 @@ const RepairService: React.FC = () => {
         </StatItem>
         <StatItem>
           <StatNumber>
-            {statsInView ? <CountUp start={0} end={300} duration={2} /> : 300}
+            {statsInView ? <CountUp start={0} end={500} duration={2} /> : 300}
           </StatNumber>
           <StatLabel>Clientes Satisfechos</StatLabel>
         </StatItem>

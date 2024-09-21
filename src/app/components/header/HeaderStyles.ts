@@ -3,18 +3,19 @@ import { motion } from 'framer-motion';
 
 export const HeaderContainer = styled.header`
   width: 100%;
-  height: 80vh; /* Aumentamos la altura para que ocupe toda la pantalla */
+  height: 80vh; /* Ocupa casi toda la pantalla */
   background-image: url('/images/header.jpg'); /* Imagen de fondo */
   background-size: cover;
   background-position: center;
+  background-attachment: fixed; /* Esto habilita el efecto parallax */
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   text-align: center;
   position: relative;
-  overflow: hidden; /* Para evitar que se salgan elementos fuera del contenedor */
-  
+  overflow: hidden;
+
   &:before {
     content: '';
     position: absolute;
@@ -24,6 +25,10 @@ export const HeaderContainer = styled.header`
     height: 100%;
     background: rgba(0, 0, 0, 0.7); /* Oscurece la imagen de fondo para mayor contraste */
     z-index: 0;
+  }
+
+  @media (max-width: 768px) {
+    background-attachment: scroll; /* En móviles desactivamos el parallax */
   }
 `;
 

@@ -18,7 +18,7 @@ import { FaBicycle, FaHandsHelping, FaRegCheckCircle } from "react-icons/fa";
 const AboutUs: React.FC = () => {
   return (
     <AboutContainer>
-      {/* Sección Hero */}
+      {/* Sección Hero con efecto parallax */}
       <HeroSection>
         <HeroContent>
           <Title>Conócenos</Title>
@@ -68,7 +68,11 @@ const AboutUs: React.FC = () => {
       </InfoSection>
 
       {/* Llamada a la acción */}
-      <CallToAction href="https://wa.me/5492964541181" target="_blank" rel="noopener noreferrer">
+      <CallToAction
+        href="https://wa.me/5492964541181"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <WhatsAppIcon />
         Contáctanos por WhatsApp
       </CallToAction>

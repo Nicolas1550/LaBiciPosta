@@ -10,19 +10,19 @@ import {
   SocialIcon,
   FooterBottom,
   CopyrightText,
-  LinkedInLink // Importamos el estilo para el enlace de LinkedIn
+  LinkedInLink 
 } from './FooterStyles';
 import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from 'react-icons/fa';
 
 const Footer: React.FC = () => {
-  const [hasMounted, setHasMounted] = useState(false); // Estado para controlar el montaje
+  const [hasMounted, setHasMounted] = useState(false); 
 
   useEffect(() => {
-    setHasMounted(true); // Marca el componente como montado
+    setHasMounted(true);
   }, []);
 
   if (!hasMounted) {
-    return null; // Evita renderizar hasta que esté montado
+    return null; 
   }
 
   return (
@@ -32,16 +32,15 @@ const Footer: React.FC = () => {
         <FooterColumn>
           <FooterTitle>Sobre La BICIPOSTA</FooterTitle>
           <FooterLink href="/nosotros">Quiénes somos</FooterLink>
-          <FooterLink href="#events">Eventos</FooterLink>
+          <FooterLink href="/carreras">Próximas Carreras</FooterLink>
           <FooterLink href="/contacto">Contacto</FooterLink>
         </FooterColumn>
 
         {/* Segunda columna */}
         <FooterColumn>
           <FooterTitle>Recursos</FooterTitle>
-          <FooterLink href="#blog">Blog</FooterLink>
-          <FooterLink href="#preguntas">Preguntas frecuentes</FooterLink>
-          <FooterLink href="#support">Soporte</FooterLink>
+          <FooterLink href="/preguntas">Preguntas frecuentes</FooterLink>
+          <FooterLink href="/soporte">Soporte</FooterLink>
         </FooterColumn>
 
         {/* Tercera columna */}

@@ -9,7 +9,7 @@ export const MainContainer = styled.div`
   min-height: 100vh;
 `;
 
-// Sección Hero
+// Sección Hero con efecto parallax
 export const HeroSection = styled.section`
   display: flex;
   justify-content: center;
@@ -17,6 +17,7 @@ export const HeroSection = styled.section`
   background-image: url("images/shower.webp");
   background-size: cover;
   background-position: center;
+  background-attachment: fixed; /* Esto habilita el efecto parallax */
   height: 100vh;
   color: white;
   text-align: center;
@@ -30,9 +31,15 @@ export const HeroSection = styled.section`
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5); /* Oscurece la imagen de fondo para mayor contraste */
+    z-index: 0;
+  }
+
+  @media (max-width: 768px) {
+    background-attachment: scroll; /* Desactivamos el parallax en móviles */
   }
 `;
+
 
 // Contenido Hero
 export const HeroContent = styled.div`

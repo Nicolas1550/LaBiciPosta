@@ -25,13 +25,13 @@ const Contact: React.FC = () => {
     )
     .then((result) => {
       console.log(result.text);
-      setMessageSent(true); // Cambiamos el estado cuando el mensaje se envía con éxito
+      setMessageSent(true); 
     })
     .catch((error) => {
       console.error(error.text);
     });
     
-    e.currentTarget.reset(); // Limpia el formulario después de enviar
+    e.currentTarget.reset(); 
   };
 
   return (

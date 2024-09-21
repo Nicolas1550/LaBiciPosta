@@ -7,42 +7,64 @@ export const AboutContainer = styled.section`
   flex-direction: column;
   align-items: center;
   padding: 60px 20px;
-  background-color: #fff;
-  color: #333; /* Color de texto negro */
+  background-color: #f0f4f8;
+  color: #333;
+  min-height: 100vh;
 `;
 
-// Sección Hero
+// Sección Hero con efecto parallax
 export const HeroSection = styled.section`
   width: 100%;
-  background-color: #f9f9f9;
-  padding: 100px 20px;
+  height: 70vh;
+  background-image: url("/images/aboutUS.webp"); /* Asegúrate de tener una imagen adecuada */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Efecto parallax */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   text-align: center;
-  border-bottom: 2px solid #333;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 150px;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Oscurecemos la imagen para mejorar la legibilidad del texto */
+    z-index: 0;
+  }
 `;
 
 export const HeroContent = styled.div`
+  position: relative;
+  z-index: 1; /* El texto se muestra sobre el overlay oscuro */
   max-width: 800px;
-  margin: 0 auto;
+  color: white;
+  padding: 20px;
+  animation: fadeInUp 1.5s ease-out;
 `;
 
 export const Title = styled.h1`
-  font-size: 3.8rem;
+  font-size: 4rem;
   font-weight: 800;
-  color: #ff4e50; /* Rojo de la empresa */
+  color: #ff4e50;
   margin-bottom: 1.5rem;
   text-transform: uppercase;
-  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Toque moderno */
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
   animation: fadeIn 1.2s ease;
 
   @media (max-width: 768px) {
     font-size: 2.8rem;
   }
 
-  @keyframes fadeIn {
+  @keyframes fadeInUp {
     from {
       opacity: 0;
-      transform: translateY(-20px);
+      transform: translateY(20px);
     }
     to {
       opacity: 1;
@@ -52,11 +74,11 @@ export const Title = styled.h1`
 `;
 
 export const Subtitle = styled.p`
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   line-height: 1.8;
-  color: #333;
-  margin-bottom: 3rem;
-  animation: fadeIn 1.5s ease;
+  margin-bottom: 2rem;
+  color: #ddd;
+  animation: fadeInUp 1.5s ease;
 
   @media (max-width: 768px) {
     font-size: 1.3rem;
@@ -65,43 +87,37 @@ export const Subtitle = styled.p`
 
 // Sección de información
 export const InfoSection = styled.section`
-  display: flex;
-  justify-content: space-around;
-  align-items: center; /* Para centrar los íconos */
-  width: 100%;
-  max-width: 1200px;
-  padding: 60px 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 40px;
-  flex-wrap: wrap;
+  padding: 60px 20px;
+  max-width: 1200px;
+  width: 100%;
+  margin-top: -100px; /* Posiciona esta sección para que se superponga un poco con el Hero */
 
   @media (max-width: 768px) {
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 `;
 
 export const InfoCard = styled.div`
-  background-color: #f3f3f3;
+  background-color: #fff;
   padding: 30px;
   border-radius: 15px;
-  width: 300px;
-  text-align: center;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
 
   &:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  }
-
-  @media (max-width: 768px) {
-    width: 90%;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
   }
 `;
 
 export const InfoIcon = styled.div`
-  font-size: 4rem; /* Iconos más grandes para más presencia */
-  color: #25d366; /* Verde de la empresa */
+  font-size: 4rem;
+  color: #25d366;
   margin-bottom: 20px;
   display: flex;
   justify-content: center;
@@ -109,7 +125,7 @@ export const InfoIcon = styled.div`
   transition: transform 0.3s ease;
 
   &:hover {
-    transform: rotate(360deg); /* Animación de rotación al pasar el mouse */
+    transform: rotate(360deg);
   }
 `;
 
@@ -122,15 +138,15 @@ export const InfoTitle = styled.h3`
 
 export const InfoDescription = styled.p`
   font-size: 1.2rem;
-  line-height: 1.6;
   color: #555;
+  line-height: 1.6;
 `;
 
 // Botón de llamada a la acción
 export const CallToAction = styled.a`
   display: inline-flex;
   align-items: center;
-  background-color: #25d366; /* Verde de la empresa */
+  background-color: #25d366;
   color: white;
   padding: 15px 40px;
   font-size: 1.6rem;
