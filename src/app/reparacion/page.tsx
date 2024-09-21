@@ -20,18 +20,21 @@ import {
 const RepairPage: React.FC = () => {
   const [hasMounted, setHasMounted] = useState(false); 
 
-  // Asegura que el componente se monte antes de renderizar
   useEffect(() => {
-    setHasMounted(true);
+    // Simular un retraso en la carga del componente para que los estilos se apliquen correctamente
+    const timeout = setTimeout(() => {
+      setHasMounted(true);
+    }, 100);
+
+    return () => clearTimeout(timeout); // Limpiar el timeout al desmontar
   }, []);
 
-  // No se renderiza el componente hasta que esté montado
   if (!hasMounted) {
-    return null;
+    return null; // Espera a que el componente esté montado para evitar problemas con los estilos
   }
 
   const whatsappLink =
-    "https://wa.me/123456789?text=¡Hola!%20Me%20interesa%20el%20servicio%20de%20reparación%20de%20bicicletas.";
+    "https://wa.me/5492964541181?text=¡Hola!%20Me%20interesa%20el%20servicio%20de%20reparación%20de%20bicicletas.";
 
   return (
     <>
