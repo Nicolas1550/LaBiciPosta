@@ -93,6 +93,9 @@ const Navbar = () => {
           <motion.li whileHover={{ scale: 1.1 }}>
             <a href="/contacto">Contacto</a>
           </motion.li>
+          <motion.li whileHover={{ scale: 1.1 }}>
+            <a href="/galeria">Galería de Eventos</a>
+          </motion.li>
         </motion.ul>
       </MenuLinks>
 
@@ -171,6 +174,9 @@ const Navbar = () => {
           </motion.li>
           <motion.li whileHover={{ scale: 1.1 }}>
             <a href="/contacto">Contacto</a>
+          </motion.li>
+          <motion.li whileHover={{ scale: 1.1 }}>
+            <a href="/galeria">Galería de Eventos</a>
           </motion.li>
           {/* Agregar Categorías dentro del menú móvil */}
           <motion.li whileHover={{ scale: 1.1 }}>

@@ -7,8 +7,8 @@ export const AboutContainer = styled.section`
   flex-direction: column;
   align-items: center;
   padding: 60px 20px;
-  background-color: #f0f4f8;
-  color: #333;
+  background: linear-gradient(135deg, #1c1c1c 30%, #2a2a2a 100%); // Fondo gradiente moderno
+  color: #f5f5f5; // Texto blanco suave
   min-height: 100vh;
 `;
 
@@ -16,10 +16,10 @@ export const AboutContainer = styled.section`
 export const HeroSection = styled.section`
   width: 100%;
   height: 70vh;
-  background-image: url("/images/aboutUS.webp"); /* Asegúrate de tener una imagen adecuada */
+  background-image: url("/images/about.webp"); /* Imagen con efecto parallax */
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; /* Efecto parallax */
+  background-attachment: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,6 +27,7 @@ export const HeroSection = styled.section`
   text-align: center;
   overflow: hidden;
   margin-bottom: 150px;
+
   &:before {
     content: "";
     position: absolute;
@@ -34,7 +35,7 @@ export const HeroSection = styled.section`
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Oscurecemos la imagen para mejorar la legibilidad del texto */
+    background: rgba(0, 0, 0, 0.5); /* Oscurecemos la imagen para mejor legibilidad */
     z-index: 0;
   }
 `;
@@ -51,7 +52,7 @@ export const HeroContent = styled.div`
 export const Title = styled.h1`
   font-size: 4rem;
   font-weight: 800;
-  color: #ff4e50;
+  color: #ff4e50; /* Rojo vibrante */
   margin-bottom: 1.5rem;
   text-transform: uppercase;
   text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
@@ -93,7 +94,7 @@ export const InfoSection = styled.section`
   padding: 60px 20px;
   max-width: 1200px;
   width: 100%;
-  margin-top: -100px; /* Posiciona esta sección para que se superponga un poco con el Hero */
+  margin-top: -100px; /* Superposición con Hero para efecto visual */
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
@@ -102,7 +103,7 @@ export const InfoSection = styled.section`
 `;
 
 export const InfoCard = styled.div`
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.1); // Fondo semi-transparente para un efecto moderno
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
@@ -131,18 +132,18 @@ export const InfoIcon = styled.div`
 
 export const InfoTitle = styled.h3`
   font-size: 1.8rem;
-  color: #333;
+  color: #f5f5f5; // Texto blanco suave para que coincida con el fondo oscuro
   font-weight: 700;
   margin-bottom: 15px;
 `;
 
 export const InfoDescription = styled.p`
   font-size: 1.2rem;
-  color: #555;
+  color: #ddd; // Texto claro para mantener la coherencia
   line-height: 1.6;
 `;
 
-// Botón de llamada a la acción
+// Botón de llamada a la acción con animación en hover
 export const CallToAction = styled.a`
   display: inline-flex;
   align-items: center;
