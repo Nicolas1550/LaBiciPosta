@@ -50,15 +50,21 @@ export const Title = styled.h1`
   z-index: 1;  // Aseguramos que el texto esté por encima del fondo
 
   animation: ${fadeInUp} 1.5s ease-out;
+
   @media (max-width: 768px) {
-    font-size: 2.5rem;
+    font-size: 2.2rem; // Reducimos para móviles
+    text-align: center; // Centrar en pantallas pequeñas
+  }
+
+  @media (max-width: 480px) {
+    font-size: 2rem; // Ajuste adicional en pantallas muy pequeñas
   }
 `;
 
 // Descripción introductoria con opacidad y animación en hover
 export const Description = styled.p`
   font-size: 1.3rem;
-  color: #e0e0e0; // Gris claro mejorado
+  color: #e0e0e0;
   text-align: center;
   max-width: 800px;
   margin-bottom: 40px;
@@ -67,13 +73,18 @@ export const Description = styled.p`
   animation: ${fadeInUp} 1.6s ease-out;
 
   &:hover {
-    opacity: 0.9; // Cambio más sutil en hover
-    transform: translateY(-5px); // Movimiento ligero hacia arriba
+    opacity: 0.9;
+    transform: translateY(-5px);
   }
 
   @media (max-width: 768px) {
     font-size: 1.1rem;
     margin-bottom: 30px;
+    padding: 0 10px; // Añadimos padding para evitar que el texto toque los bordes
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1rem; // Texto más pequeño en pantallas pequeñas
   }
 `;
 
@@ -93,8 +104,8 @@ export const CarouselContainer = styled.div`
     z-index: 1;
 
     img {
-      border-radius: 20px; // Bordes más pronunciados
-      width: 85%; // Ajustamos el tamaño de la imagen
+      border-radius: 20px;
+      width: 85%;
       height: auto;
       object-fit: cover;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
@@ -102,8 +113,8 @@ export const CarouselContainer = styled.div`
     }
 
     &:hover img {
-      transform: scale(1.1); // Escalado mayor en hover
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5); // Sombra más intensa en hover
+      transform: scale(1.1);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
     }
   }
 
@@ -111,6 +122,19 @@ export const CarouselContainer = styled.div`
     position: relative;
     margin-top: 20px;
     z-index: 1;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 100%; // Ocupa todo el ancho en pantallas pequeñas
+    img {
+      width: 90%; // Ajustamos el tamaño de la imagen
+    }
+  }
+
+  @media (max-width: 480px) {
+    img {
+      width: 95%; // Aún más pequeño en pantallas pequeñas
+    }
   }
 `;
 
@@ -125,12 +149,16 @@ export const ImageDescription = styled.p`
   transition: transform 0.3s ease;
 
   &:hover {
-    transform: translateY(-5px); // Desplazamiento suave en hover
+    transform: translateY(-5px);
   }
 
   @media (max-width: 768px) {
     font-size: 1.1rem;
     margin-bottom: 20px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1rem; // Ajuste adicional para pantallas muy pequeñas
   }
 `;
 
@@ -155,6 +183,10 @@ export const InfoSection = styled.div`
     @media (max-width: 768px) {
       font-size: 1.1rem;
     }
+
+    @media (max-width: 480px) {
+      font-size: 1rem; // Tamaño de texto más pequeño en pantallas pequeñas
+    }
   }
 `;
 
@@ -173,12 +205,17 @@ export const ContactButton = styled.a`
 
   &:hover {
     background-color: #1ebd58;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6); // Sombra más pronunciada
-    transform: scale(1.08); // Zoom suave en hover
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+    transform: scale(1.08);
   }
 
   @media (max-width: 768px) {
     font-size: 1.3rem;
-    padding: 12px 30px;
+    padding: 12px 30px; // Reducimos el tamaño del botón en pantallas pequeñas
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.1rem; // Botón más pequeño en pantallas muy pequeñas
+    padding: 10px 25px;
   }
 `;
