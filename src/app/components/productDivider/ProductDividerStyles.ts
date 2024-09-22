@@ -166,3 +166,21 @@ export const DividerImage = styled.img`
     transform: scale(1.1);
   }
 `;
+// Texto pequeño y sutil debajo del título
+export const SubText = styled.p`
+  font-size: 1rem;
+  color: #555;
+  margin-top: -20px; /* Ajuste para acercarlo al título */
+  margin-bottom: 30px;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.8rem;
+    margin-bottom: 15px;
+  }
+`;

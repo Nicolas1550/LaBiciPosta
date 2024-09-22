@@ -42,12 +42,12 @@ const RepairService: React.FC = () => {
       {/* Hero Section */}
       <HeroSection>
         <HeroContent>
-          <Title>Reparación de Bicicletas en Bici Posta</Title>
+          <Title>Reparación de Bicicletas en Toranza Bike</Title>
           <Subtitle>
             Servicio rápido y profesional para que sigas rodando sin problemas.
           </Subtitle>
           <ContactButton
-            href="https://wa.me/5492964541181"
+            href="https://wa.me/5492964502103"
             target="_blank"
             rel="noopener noreferrer"
           >

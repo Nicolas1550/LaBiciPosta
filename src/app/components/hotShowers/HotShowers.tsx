@@ -22,12 +22,13 @@ const HotShowers: React.FC = () => {
       {/* Sección Hero */}
       <HeroSection>
         <HeroContent>
-          <Title>Relájate y recarga energías con nuestras Hot Showers</Title>
+          <Title>Relájate y recarga energías con nuestras Warm Showers</Title>
           <Subtitle>
-            Después de un largo paseo, disfruta de una ducha caliente y un descanso reparador en BiciPosta. ¡Perfecto para ciclistas!
+            Después de un largo paseo, disfruta de una ducha caliente y un
+            descanso reparador en BiciPosta. ¡Perfecto para ciclistas!
           </Subtitle>
           <CallToAction
-            href="https://wa.me/5492964541181"
+            href="https://wa.me/5492964502103"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -43,7 +44,7 @@ const HotShowers: React.FC = () => {
           <FeatureIcon>
             <ShowerIcon />
           </FeatureIcon>
-          <FeatureTitle>Hot Showers</FeatureTitle>
+          <FeatureTitle>Warm Showers</FeatureTitle>
         </FeatureItem>
 
         <FeatureItem>

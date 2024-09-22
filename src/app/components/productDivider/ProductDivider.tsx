@@ -8,6 +8,7 @@ import {
   DividerImage,
   CallToAction,
   WhatsAppIcon,
+  SubText, // Importamos el nuevo estilo
 } from "./ProductDividerStyles";
 
 const ProductDivider: React.FC = () => {
@@ -15,8 +16,9 @@ const ProductDivider: React.FC = () => {
     <DividerContainer>
       <DividerContent>
         <Title>Explora Nuestros Productos de Ciclismo</Title>
+        <SubText>Ventas para toda la provincia de Tierra del Fuego</SubText> {/* Nuevo texto */}
         <CallToAction
-          href="https://wa.me/5492964541181"
+          href="https://wa.me/5492964502103"
           target="_blank"
           rel="noopener noreferrer"
         >

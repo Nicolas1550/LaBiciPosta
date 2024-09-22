@@ -69,7 +69,7 @@ const AboutUs: React.FC = () => {
 
       {/* Llamada a la acción */}
       <CallToAction
-        href="https://wa.me/5492964541181"
+        href="https://wa.me/5492964502103"
         target="_blank"
         rel="noopener noreferrer"
       >
