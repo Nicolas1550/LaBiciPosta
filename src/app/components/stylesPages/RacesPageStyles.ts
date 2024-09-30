@@ -46,6 +46,10 @@ export const RaceCard = styled.div`
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra horizontalmente el contenido */
+  justify-content: center; /* Centra verticalmente el contenido */
 
   &:hover {
     transform: translateY(-10px);
@@ -54,8 +58,10 @@ export const RaceCard = styled.div`
 
   svg {
     margin-bottom: 1rem;
+    align-self: center; /* Asegura que el ícono esté centrado */
   }
 `;
+
 
 export const RaceInfo = styled.div`
   h3 {

@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import {
   FooterContainer,
   FooterContent,
@@ -10,19 +10,19 @@ import {
   SocialIcon,
   FooterBottom,
   CopyrightText,
-  LinkedInLink 
-} from './FooterStyles';
-import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from 'react-icons/fa';
+  LinkedInLink,
+} from "./FooterStyles";
+import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 
 const Footer: React.FC = () => {
-  const [hasMounted, setHasMounted] = useState(false); 
+  const [hasMounted, setHasMounted] = useState(false);
 
   useEffect(() => {
     setHasMounted(true);
   }, []);
 
   if (!hasMounted) {
-    return null; 
+    return null;
   }
 
   return (
@@ -47,10 +47,15 @@ const Footer: React.FC = () => {
         <FooterColumn>
           <FooterTitle>Síguenos</FooterTitle>
           <SocialIcons>
-            <SocialIcon href="https://facebook.com" target="_blank"><FaFacebookF /></SocialIcon>
-            <SocialIcon href="https://twitter.com" target="_blank"><FaTwitter /></SocialIcon>
-            <SocialIcon href="https://instagram.com" target="_blank"><FaInstagram /></SocialIcon>
-            <SocialIcon href="https://youtube.com" target="_blank"><FaYoutube /></SocialIcon>
+            <SocialIcon href="https://facebook.com" target="_blank">
+              <FaFacebookF />
+            </SocialIcon>
+            <SocialIcon href="https://instagram.com" target="_blank">
+              <FaInstagram />
+            </SocialIcon>
+            <SocialIcon href="https://youtube.com" target="_blank">
+              <FaYoutube />
+            </SocialIcon>
           </SocialIcons>
         </FooterColumn>
       </FooterContent>
@@ -58,8 +63,12 @@ const Footer: React.FC = () => {
       {/* Footer Bottom con enlace a LinkedIn */}
       <FooterBottom>
         <CopyrightText>
-          &copy; {new Date().getFullYear()} La BICIPOSTA. Todos los derechos reservados. Creado por{' '}
-          <LinkedInLink href="https://www.linkedin.com/in/sofia-luciuk/" target="_blank">
+          &copy; {new Date().getFullYear()} La BICIPOSTA. Todos los derechos
+          reservados. Creado por{" "}
+          <LinkedInLink
+            href="https://www.linkedin.com/in/sofia-luciuk/"
+            target="_blank"
+          >
             Nicolás Luciuk
           </LinkedInLink>
         </CopyrightText>

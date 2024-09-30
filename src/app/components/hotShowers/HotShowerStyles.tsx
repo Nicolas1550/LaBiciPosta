@@ -37,9 +37,9 @@ export const HeroSection = styled.section`
 
   @media (max-width: 768px) {
     background-attachment: scroll; /* Desactivamos el parallax en móviles */
+    height: 70vh; /* Reducimos la altura en pantallas pequeñas */
   }
 `;
-
 
 // Contenido Hero
 export const HeroContent = styled.div`
@@ -59,6 +59,11 @@ export const HeroContent = styled.div`
       transform: translateY(0);
     }
   }
+
+  @media (max-width: 768px) {
+    padding: 20px;
+    max-width: 100%; /* Asegura que el contenido ocupe el ancho completo */
+  }
 `;
 
 // Título principal
@@ -68,6 +73,10 @@ export const Title = styled.h1`
   margin-bottom: 20px;
   color: #fff;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+
+  @media (max-width: 768px) {
+    font-size: 2.5rem; /* Ajustamos el tamaño de la fuente en pantallas pequeñas */
+  }
 `;
 
 // Subtítulo
@@ -76,6 +85,11 @@ export const Subtitle = styled.p`
   margin-bottom: 40px;
   color: #ddd;
   line-height: 1.6;
+
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
 `;
 
 // Botón de llamada a la acción (reservar)
@@ -96,6 +110,11 @@ export const CallToAction = styled.a`
     transform: scale(1.1); /* Agrandar levemente al pasar el mouse */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
   }
+
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+  }
 `;
 
 // Ícono de WhatsApp dentro del botón
@@ -106,6 +125,10 @@ export const WhatsAppIcon = styled(FaWhatsapp)`
 
   ${CallToAction}:hover & {
     transform: rotate(20deg); /* Efecto rotación */
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem; /* Ajustamos el tamaño del ícono en pantallas pequeñas */
   }
 `;
 
@@ -120,6 +143,7 @@ export const FeaturesSection = styled.section`
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
+    padding: 40px 10px; /* Reducimos el padding en pantallas pequeñas */
   }
 `;
 
@@ -131,6 +155,7 @@ export const FeatureItem = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 20px; /* Añadimos un margen para mejor separación en dispositivos pequeños */
 
   @keyframes fadeInUp {
     from {
@@ -142,6 +167,10 @@ export const FeatureItem = styled.div`
       transform: translateY(0);
     }
   }
+
+  @media (max-width: 768px) {
+    max-width: 90%; /* Asegura que ocupe el 90% del ancho en pantallas pequeñas */
+  }
 `;
 
 // Ícono de la característica (duchas, bolsas de dormir, etc.)
@@ -149,6 +178,10 @@ export const FeatureIcon = styled.div`
   font-size: 3rem;
   margin-bottom: 15px;
   color: #333;
+
+  @media (max-width: 768px) {
+    font-size: 2.5rem; /* Reducimos el tamaño del ícono en pantallas pequeñas */
+  }
 `;
 
 // Título de la característica
@@ -157,6 +190,10 @@ export const FeatureTitle = styled.h3`
   color: #333;
   font-weight: bold;
   margin-bottom: 0;
+
+  @media (max-width: 768px) {
+    font-size: 1.3rem; /* Ajustamos el tamaño de la fuente en pantallas pequeñas */
+  }
 `;
 
 // Ícono de la ducha

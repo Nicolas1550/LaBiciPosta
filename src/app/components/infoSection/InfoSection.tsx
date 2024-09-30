@@ -20,9 +20,9 @@ const InfoSection: React.FC = () => {
 
   // Proximas carreras hardcodeadas
   const upcomingRaces = [
-    { name: 'Carrera en Montaña', location: 'Andes', date: '02/02/2024' },
-    { name: 'Ciclismo Urbano', location: 'Buenos Aires', date: '15/03/2024' },
-    { name: 'Ruta Extrema', location: 'Córdoba', date: '10/04/2024' },
+    { name: 'Proximamente', location: '', date: '' },
+    { name: 'Proximamente', location: '', date: '' },
+    { name: 'Proximamente', location: '', date: '' },
   ];
 
   const handleToggleRaces = () => {

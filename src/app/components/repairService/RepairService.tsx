@@ -1,12 +1,10 @@
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/autoplay";
-import { Pagination, Autoplay } from "swiper/modules";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
-import Image from "next/image";  
+import Image from "next/image";
 import {
   MainContainer,
   HeroSection,
@@ -37,6 +35,17 @@ const RepairService: React.FC = () => {
     threshold: 0.3,
   });
 
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    arrows: false, // Para desactivar los botones de navegación si no los quieres
+  };
+
   return (
     <MainContainer>
       {/* Hero Section */}
@@ -57,7 +66,7 @@ const RepairService: React.FC = () => {
         </HeroContent>
       </HeroSection>
 
-      {/* Why Choose Us Section with Swiper */}
+      {/* Why Choose Us Section with react-slick */}
       <InformationSection>
         <TextContainer>
           <InformationText>
@@ -77,46 +86,74 @@ const RepairService: React.FC = () => {
           </InformationText>
 
           <CarouselBackground>
-            <Swiper
-              spaceBetween={30}
-              slidesPerView={1}
-              loop={true}
-              autoplay={{
-                delay: 3000,
-                disableOnInteraction: false,
-              }}
-              pagination={{ clickable: true }}
-              modules={[Pagination, Autoplay]}
-            >
-              <SwiperSlide>
+            <Slider {...settings}>
+              <div
+                style={{ position: "relative", width: "100%", height: "600px" }}
+              >
                 <Image
-                  src="/images/swiper3.webp"
+                  src="/reparacion/1.webp"
                   alt="Reparación de Bicicleta 1"
-                  width={1000} // Debes especificar un width
-                  height={600} // Debes especificar un height
-                  layout="responsive" // Esto asegura que la imagen se adapte
-                  priority={true} // Esto optimiza para la carga inicial
+                  layout="fill"
+                  objectFit="cover"
+                  priority={true}
                 />
-              </SwiperSlide>
-              <SwiperSlide>
+              </div>
+              <div
+                style={{ position: "relative", width: "100%", height: "600px" }}
+              >
                 <Image
-                  src="/images/swiper1.webp"
+                  src="/reparacion/2.webp"
                   alt="Reparación de Bicicleta 2"
-                  width={1000}
-                  height={600}
-                  layout="responsive"
+                  layout="fill"
+                  objectFit="cover"
+                  priority={true}
                 />
-              </SwiperSlide>
-              <SwiperSlide>
+              </div>
+              <div
+                style={{ position: "relative", width: "100%", height: "600px" }}
+              >
                 <Image
-                  src="/images/swiper2.webp"
+                  src="/reparacion/3.webp"
                   alt="Reparación de Bicicleta 3"
-                  width={1000}
-                  height={600}
-                  layout="responsive"
+                  layout="fill"
+                  objectFit="cover"
+                  priority={true}
                 />
-              </SwiperSlide>
-            </Swiper>
+              </div>
+              <div
+                style={{ position: "relative", width: "100%", height: "600px" }}
+              >
+                <Image
+                  src="/reparacion/4.webp"
+                  alt="Reparación de Bicicleta 4"
+                  layout="fill"
+                  objectFit="cover"
+                  priority={true}
+                />
+              </div>
+              <div
+                style={{ position: "relative", width: "100%", height: "600px" }}
+              >
+                <Image
+                  src="/reparacion/5.webp"
+                  alt="Reparación de Bicicleta 5"
+                  layout="fill"
+                  objectFit="cover"
+                  priority={true}
+                />
+              </div>
+              <div
+                style={{ position: "relative", width: "100%", height: "600px" }}
+              >
+                <Image
+                  src="/reparacion/6.webp"
+                  alt="Reparación de Bicicleta 6"
+                  layout="fill"
+                  objectFit="cover"
+                  priority={true}
+                />
+              </div>
+            </Slider>
           </CarouselBackground>
         </TextContainer>
       </InformationSection>

@@ -14,14 +14,13 @@ import {
 } from '../components/stylesPages/RacesPageStyles';
 
 const races = [
-  { name: 'Carrera en Montaña', location: 'Andes', date: '02/02/2024' },
-  { name: 'Ciclismo Urbano', location: 'Buenos Aires', date: '15/03/2024' },
-  { name: 'Ruta Extrema', location: 'Córdoba', date: '10/04/2024' },
-  { name: 'Gran Fondo', location: 'Mendoza', date: '20/05/2024' },
-  { name: 'Desafío Pampa', location: 'La Pampa', date: '10/06/2024' },
+    { name: 'Proximamente', location: '', date: '' },
+    { name: 'Proximamente', location: '', date: '' },
+    { name: 'Proximamente', location: '', date: '' },
+
 ];
 
-const whatsappLink = "https://wa.me/123456789?text=¡Hola!%20Estoy%20interesado%20en%20inscribirme%20en%20las%20carreras";
+const whatsappLink = "https://wa.me/5492964502103?text=¡Hola!%20Estoy%20interesado%20en%20inscribirme%20en%20las%20carreras";
 
 const RacesPage: React.FC = () => {
   return (

@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaFacebookF, FaYoutube, FaInstagram } from "react-icons/fa";
 import {
   LogoContainer,
   Nav,
@@ -18,14 +18,14 @@ import {
 } from "./NavbarStyles";
 
 const Navbar = () => {
-  const [hasMounted, setHasMounted] = useState(false); 
+  const [hasMounted, setHasMounted] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   // Refs para el menú hamburguesa y el botón de menú
   const menuRef = useRef<HTMLDivElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
-  const toggleButtonRef = useRef<HTMLDivElement>(null); 
+  const toggleButtonRef = useRef<HTMLDivElement>(null);
 
   const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
 
@@ -33,7 +33,7 @@ const Navbar = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   useEffect(() => {
-    setHasMounted(true); 
+    setHasMounted(true);
 
     const handleClickOutside = (event: MouseEvent) => {
       // Verifica si el clic fue fuera del menú hamburguesa, dropdown y botón de menú
@@ -43,14 +43,14 @@ const Navbar = () => {
         toggleButtonRef.current &&
         !toggleButtonRef.current.contains(event.target as Node)
       ) {
-        setIsOpen(false); 
+        setIsOpen(false);
       }
 
       if (
         dropdownRef.current &&
         !dropdownRef.current.contains(event.target as Node)
       ) {
-        setIsDropdownOpen(false); 
+        setIsDropdownOpen(false);
       }
     };
 
@@ -140,7 +140,7 @@ const Navbar = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaTwitter />
+            <FaYoutube />
           </a>
           <a
             href="https://instagram.com"

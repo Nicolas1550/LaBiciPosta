@@ -43,7 +43,7 @@ const RepairPage: React.FC = () => {
   }
 
   const whatsappLink =
-    "https://wa.me/5492964541181?text=¡Hola!%20Me%20interesa%20el%20servicio%20de%20reparación%20de%20bicicletas.";
+    "https://wa.me/5492964502103?text=¡Hola!%20Me%20interesa%20el%20servicio%20de%20reparación%20de%20bicicletas.";
 
   return (
     <>
