@@ -66,7 +66,7 @@ const Footer: React.FC = () => {
           &copy; {new Date().getFullYear()} La BICIPOSTA. Todos los derechos
           reservados. Creado por{" "}
           <LinkedInLink
-            href="https://www.linkedin.com/in/sofia-luciuk/"
+            href="https://www.linkedin.com/in/nicolas-luciuk/"
             target="_blank"
           >
             Nicolás Luciuk
