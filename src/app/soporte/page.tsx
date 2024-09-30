@@ -40,7 +40,7 @@ const SupportPage: React.FC = () => {
     emailjs
       .sendForm(
         "service_mwmmqvd",
-        "template_n3xuwgd",
+        "template_tyrzi5g",
         formRef.current!,
         "R93T5B0hw-lOz08xE"
       )

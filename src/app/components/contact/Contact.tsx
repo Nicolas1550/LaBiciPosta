@@ -20,7 +20,7 @@ const Contact: React.FC = () => {
     emailjs
       .sendForm(
         "service_mwmmqvd",
-        "template_n3xuwgd",
+        "template_tyrzi5g",
         formulario.current!,
         "R93T5B0hw-lOz08xE"
       )
