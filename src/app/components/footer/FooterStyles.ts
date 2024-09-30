@@ -39,7 +39,7 @@ export const FooterColumn = styled.div`
 export const FooterTitle = styled.h4`
   font-size: 1.5rem;
   font-weight: bold;
-  color: #ff4e50; /* Rojo de la marca */
+  color: #ff4e50;
   margin-bottom: 1rem;
 `;
 
@@ -51,7 +51,7 @@ export const FooterLink = styled.a`
   transition: color 0.3s ease;
 
   &:hover {
-    color: #4caf50; /* Verde de la marca */
+    color: #4caf50;
   }
 `;
 
@@ -67,14 +67,14 @@ export const SocialIcon = styled.a`
   transition: color 0.3s ease, transform 0.3s ease;
 
   &:hover {
-    color: #ff4e50; /* Rojo de la marca */
+    color: #ff4e50;
     transform: scale(1.1);
   }
 `;
 
 export const FooterBottom = styled.div`
   width: 100%;
-  border-top: 1px solid #4caf50; /* Línea verde separadora */
+  border-top: 1px solid #4caf50;
   padding-top: 1rem;
   text-align: center;
 `;
@@ -92,6 +92,22 @@ export const LinkedInLink = styled.a`
   transition: color 0.3s ease;
 
   &:hover {
-    color: #ff4e50; /* Cambia a rojo en hover */
+    color: #ff4e50;
+  }
+`;
+
+export const MapWrapper = styled.div`
+  width: 100%;
+  max-width: 600px;
+  height: 100px;
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  @media (max-width: 768px) {
+    height: 200px;
   }
 `;
