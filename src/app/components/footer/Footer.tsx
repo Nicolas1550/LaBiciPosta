@@ -13,7 +13,7 @@ import {
   LinkedInLink,
   MapWrapper,
 } from "./FooterStyles";
-import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
 
 const Footer: React.FC = () => {
   const [hasMounted, setHasMounted] = useState(false);
