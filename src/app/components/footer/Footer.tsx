@@ -51,11 +51,11 @@ const Footer: React.FC = () => {
             <SocialIcon href="https://facebook.com" target="_blank">
               <FaFacebookF />
             </SocialIcon>
-            <SocialIcon href="https://instagram.com" target="_blank">
+            <SocialIcon
+              href="https://www.instagram.com/toranzajose/"
+              target="_blank"
+            >
               <FaInstagram />
-            </SocialIcon>
-            <SocialIcon href="https://youtube.com" target="_blank">
-              <FaYoutube />
             </SocialIcon>
           </SocialIcons>
         </FooterColumn>

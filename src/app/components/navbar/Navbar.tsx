@@ -136,14 +136,7 @@ const Navbar = () => {
             <FaFacebookF />
           </a>
           <a
-            href="https://twitter.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaYoutube />
-          </a>
-          <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/toranzajose/"
             target="_blank"
             rel="noopener noreferrer"
           >

@@ -30,13 +30,13 @@ const ProductDivider: React.FC = () => {
       <DividerImages>
         <ImageContainer>
           <DividerImage
-            src="/images/cycling.webp"
+            src="/productos/1.webp"
             alt="Equipo de Ciclismo 1"
           />
         </ImageContainer>
         <ImageContainer>
           <DividerImage
-            src="/images/cycling2.webp"
+            src="/productos/2.webp"
             alt="Equipo de Ciclismo 2"
           />
         </ImageContainer>

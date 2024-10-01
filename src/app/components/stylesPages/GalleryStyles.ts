@@ -105,9 +105,9 @@ export const CarouselContainer = styled.div`
 
     img {
       border-radius: 20px;
-      width: 85%;
-      height: auto;
-      object-fit: cover;
+      width: 100%; // Asegura que la imagen ocupe el 100% del contenedor
+      height: 550px; // Establecemos una altura fija para todas las imágenes
+      object-fit: cover; // Mantiene el recorte para que la imagen cubra todo el espacio
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
       transition: transform 0.4s ease, box-shadow 0.4s ease;
     }
@@ -127,16 +127,19 @@ export const CarouselContainer = styled.div`
   @media (max-width: 768px) {
     max-width: 100%; // Ocupa todo el ancho en pantallas pequeñas
     img {
-      width: 90%; // Ajustamos el tamaño de la imagen
+      width: 100%; // Asegura que la imagen ocupe el 100% del contenedor
+      height: 250px !important; // Reducimos la altura en pantallas más pequeñas
     }
   }
 
   @media (max-width: 480px) {
     img {
-      width: 95%; // Aún más pequeño en pantallas pequeñas
+      width: 100%;
+      height: 200px !important; // Aún más pequeño en pantallas muy pequeñas
     }
   }
 `;
+
 
 // Descripción de cada imagen dentro del carrusel con sombras y transiciones
 export const ImageDescription = styled.p`
