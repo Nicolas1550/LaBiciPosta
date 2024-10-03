@@ -41,7 +41,7 @@ const RacesPage: React.FC = () => {
         ))}
       </RacesGrid>
       
-      <MotivationalText>¿Te lo vas a perder?</MotivationalText>
+      <MotivationalText>¿O TE LA VAS A PERDER?</MotivationalText>
       <WhatsappButton
         href={whatsappLink}
         target="_blank"
