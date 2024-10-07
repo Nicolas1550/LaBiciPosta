@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
         <FooterColumn>
           <FooterTitle>Síguenos</FooterTitle>
           <SocialIcons>
-            <SocialIcon href="https://facebook.com" target="_blank">
+            <SocialIcon href="https://www.facebook.com/labiciposta" target="_blank">
               <FaFacebookF />
             </SocialIcon>
             <SocialIcon
