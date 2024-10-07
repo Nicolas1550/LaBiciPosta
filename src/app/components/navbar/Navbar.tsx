@@ -129,7 +129,7 @@ const Navbar = () => {
         {/* Redes sociales */}
         <SocialMediaIcons>
           <a
-            href="https://facebook.com"
+            href="https://www.facebook.com/labiciposta"
             target="_blank"
             rel="noopener noreferrer"
           >
